@@ -1,71 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- favicon -->
-    <link rel="icon" href="./assets/images/award.png" type="image/x-icon"
-        title="Sports and competition icons created by Assia Benkerroum from www.flaticon.com">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css"/>
-    <!-- JS main -->
-    <script type="module" src="js/main.js"></script>
-    <title>Code Challenge 2023</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/award.png" type="image/x-icon"
+    title="Sports and competition icons created by Assia Benkerroum from www.flaticon.com">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- JS main -->
+  <script type="module" src="js/main.js"></script>
+  <title>Code Challenge 2023</title>
 </head>
+
 <body>
-    <div class="loader" id="loader">
-        <div class="lds-dual-ring"></div>
-        <p class="neonTextFlicker">Loading...</p>
-    </div>
-    <header>
-        <div class="home" id="home">
-            <img src="./assets/images/3d_background_animation.gif" alt="Background Animation">
-            <div class="title-home neonTextGlow">
-            <h1>Hello! I'm <span class="neonTextFlicker" data-name></span></h1><br>
-            <h5 data-profession></h5>
-            <a class="scroll-home mb-4" href="#about">
-                <p class="m-0">scroll</p>
-                <em class="bi bi-arrow-down fs-4"></em>
-            </a>
-            </div>
+  <div class="loader" id="loader">
+    <div class="lds-dual-ring"></div>
+    <p class="neonTextFlicker">Loading...</p>
+  </div>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="me-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item d-flex justify-content-center">
+              <a class="nav-link px-3" href="#home">Home</a>
+            </li>
+            <li class="nav-item d-flex justify-content-center">
+              <a class="nav-link px-3" href="#requirements">Requirements</a>
+            </li>
+            <li class="nav-item d-flex justify-content-center">
+              <a class="nav-link px-3" href="#registration">Registration</a>
+            </li>
+          </ul>
         </div>
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse " id="navbarNav">
-                <div class="me-auto"></div>
-                <ul class="navbar-nav">
-                  <li class="nav-item d-flex justify-content-center">
-                    <a class="nav-link px-3" href="#home">Home</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="container home" id="home">
+        <div class="home_background">
+          <div class="home_title">
+            <h1>Welcome to the <span class="neon-text">Animation Challenge</span></h1><br>
+            <h5>Are you ready to unleash your creativity?</h5>
+            <a class="home_scroll mb-4" href="#about">
+              <p class="m-0">scroll</p>
+              <em class="bi bi-arrow-down fs-4 neon-text"></em>
+            </a>
+          </div>
+        </div>
+    </section>
+    <section class="background_two">
+      <div class="container requirements" id="requirements">
+        <!-- RULES -->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#requirementsModal">
+          Requirements
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="requirementsModal" tabindex="-1" aria-labelledby="requirementsModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content bg-dark">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="requirementsLabel">Competition Requirements</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <ul>
+                  <li>Create a new public repository on Github.</li>
+                  <li>Consistent commit progress in Github.</li>
+                  <li>Share the repository URL in the registration form.</li>
+                  <li>Repository submission deadline: October 20, 2023.</li>
+                  <li>Animation and code presentation: October 27, 2023.</li>
+                  <li>Time for project presentation: 15 to 20 minutes.</li>
+                  <li>Animation theme: Landscapes.</li>
+                  <li>Animation duration: 180 seconds.</li>
+                  <li>Maximum number of pages: 1 page.</li>
+                  <li>Width: 100vw.</li>,
+                  <li>Height: 100vh.</li>
+                  <li>Styles without external frameworks: The goal is to evaluate participants' abilities to write CSS and
+                    JS from scratch, so please do not use external frameworks like Bootstrap, Vue.js, etc.</li>
+                  <li>Comments and readability: Participants are requested to use appropriate comments in their code to
+                    explain complex sections or design decisions.</li>
+                  <li>Include 3 buttons:
+                    <ul>
+                      <li>Button to start or resume the animation.</li>
+                      <li>Button to pause the animation.</li>
+                      <li>Button to restart the animation.</li>
+                    </ul>
                   </li>
-                  <li class="nav-item d-flex justify-content-center">
-                    <a class="nav-link px-3" href="#about">About</a>
+                  <li>Technologies to Use:
+                    <ul>
+                      <li>HTML.</li>
+                      <li>SCSS or SASS.</li>
+                      <li>Vanilla Javascript.</li>
+                    </ul>
                   </li>
-                  <li class="nav-item d-flex justify-content-center">
-                    <a class="nav-link px-3" href="#work">Work</a>
+                  <li>HTML:
+                    <ul>
+                      <li>Semantic HTML structure: Use semantically appropriate HTML tags to ensure a clear and accessible
+                        animation structure.</li>
+                      <li>Specific attributes and properties: Specify the use of certain HTML attributes or properties,
+                        such as the data- attribute, to facilitate communication between HTML and JavaScript.</li>
+                    </ul>
                   </li>
-                  <li class="nav-item d-flex justify-content-center">
-                    <a class="nav-link px-3" href="#contact">Contact</a>
+                  <li>SCSS or SASS:
+                    <ul>
+                      <li>Use of SASS variables: Use SASS variables to maintain consistency in the color palette, font
+                        sizes, and other reusable styles.</li>
+                      <li>Use of Flexbox or Grid: Utilize Flexbox or CSS Grid to efficiently and flexibly create the
+                        animation's structure and layout.</li>
+                      <li>Use of Keyframes: Employ keyframes to create more complex and controlled animations within the
+                        animation.</li>
+                      <li>Use of Media Queries: Implement media queries to establish specific styles based on screen size
+                        and enhance the experience on different devices.</li>
+                    </ul>
                   </li>
+                  <li>Vanilla Javascript:
+                    <ul>
+                      <li>Events and Listeners: Use event listeners to detect and respond to user events, such as clicks
+                        or mouse movements.</li>
+                      <li>DOM Manipulation: Use JavaScript to manipulate the DOM and create or modify elements necessary
+                        for the animation.</li>
+                      <li>Performance Optimization: Encourage participants to optimize their JavaScript code to avoid
+                        unnecessary loops, excessive resource usage, or redundant code.</li>
+                    </ul>
+                  </li>
+                  <li>Compatibility and Responsive Design: The animation must be compatible with different browsers and
+                    devices, and it should have a responsive design that adapts to various screen sizes.</li>
+                  <li>Evaluation and Criteria:
+                    <ul>
+                      <li>Evaluation will depend on the level and experience of each competitor.</li>
+                      <li>Establish criteria for evaluating animations, which may include:
+                        <ul>
+                          <li>Originality.</li>
+                          <li>Visual quality.</li>
+                          <li>Code efficiency.</li>
+                          <li>Complexity of the animation.</li>
+                          <li>Functionality.</li>
+                          <li>Among other factors.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Each project must be completed individually.</li>
                 </ul>
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
             </div>
-          </nav>
-    </header>
-    <main>
-        <section>
-            <h1>Welcome to the Animation Challenge</h1>
-            <p>Are you ready to unleash your creativity?</p>
-        </section>
-    </main>
-    <footer></footer>
+          </div>
+        </div>
+
+
+        <!-- RESOURCES -->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gitHubPagesModal">
+          GitHub Pages
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="gitHubPagesModal" tabindex="-1" aria-labelledby="gitHubPagesModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content bg-dark">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="gitHubPagesModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills">
+      <div class="skills_box">
+        <i class="bi bi-lightbulb neon-text"></i>
+        <p>Think</p>
+      </div>
+      <div class="skills_box">
+        <i class="bi bi-code-slash neon-text"></i>
+        <p>Code</p>
+      </div>
+      <div class="skills_box">
+        <i class="bi bi-brush neon-text"></i>
+        <p>Create</p>
+      </div>
+    </section>
+    
+    <section class="background_two">
+      <div class="container registration flex-column" id="registration">
+        <h2 class="registration_title neon-text">Registration</h2>
+        <p class="registration_text">This is your chance to shine!</p>
+        <form class="formNewMessage row g-3 needs-validation" id="formNewMessage" novalidate>
+          <div class="col-md-6">
+            <label for="newParticipant" class="form-label">Name</label>
+            <input type="text" class="form-control formStyle" name="newParticipant" id="newParticipant" placeholder="John Doe" required>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please provide a valid name.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="newEmail" class="form-label">Email</label>
+            <input type="email" class="form-control formStyle" name="newEmail" id="newEmail" placeholder="john@example.com"
+              required>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please provide a valid email.</div>
+          </div>
+          <div class="col-12">
+            <label for="newGitHub" class="form-label">GitHub repository URL</label>
+            <input type="url" class="form-control formStyle" name="newGitHub" id="newGitHub" placeholder="https://github.com/..."
+              required>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please provide a Subject.</div>
+          </div>
+          <div class="col-12 d-flex justify-content-end">
+            <input class="btn fs-5 mt-3 formStyle" id="submitBtn" type="submit" value="Send Message!">
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+
+  <!-- bootstrap JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
