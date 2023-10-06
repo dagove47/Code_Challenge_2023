@@ -40,12 +40,12 @@
 
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
-                    submitBtn.value = 'Send Message!';
+                    submitBtn.value = 'Send Registration!';
                     clearInputs(formInputs);
                     formNewMessage.classList.remove('was-validated');
                     alert('Sent!');
                 }, (err) => {
-                    submitBtn.value = 'Send Message!';
+                    submitBtn.value = 'Send Registration!';
                     clearInputs(formInputs);
                     formNewMessage.classList.remove('was-validated');
                     alert(JSON.stringify(err));

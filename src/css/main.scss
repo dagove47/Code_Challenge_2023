@@ -20,7 +20,7 @@ body {
     min-height: 100vh;
     width: 100%;
     font-size: 16px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../assets/images/3d_background_1.gif");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../assets/images/bckgrn2.gif");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -109,7 +109,7 @@ Home
         position: absolute;
         top: 0;
         left: 0;
-        z-index: -1;
+        z-index: 10;
     }
 
     &_title {
@@ -145,7 +145,7 @@ Home
 
     &_scroll:hover {
         font-size: 25px;
-        animation: glow 1s ease-in-out infinite alternate;
+        animation: neon-glow 1s ease-in-out infinite alternate;
     }
 }
 
@@ -167,7 +167,7 @@ Requirements and Registration
     flex-wrap: wrap;
     min-height: 40vh;
 
-    .btn {
+    &_btn {
         height: 150px;
         width: 300px;
         margin: 0 25px;
@@ -176,6 +176,30 @@ Requirements and Registration
         border: solid $white-one 2px;
         box-shadow: 0 0 0.5em $white-one;
         color: $white-one;
+    }
+
+    &_btn-modal {
+        background: none;
+        border: solid $white-one 2px;
+        box-shadow: 0 0 0.5em $white-one;
+        color: $white-one;
+    }
+
+    .modal-body ul {
+        list-style: none;
+    }
+
+    .modal-body ul li {
+        margin-bottom: 15px;
+    }
+
+    .modal-body ul li::before {
+        content: "\2022";
+        color: red;
+        font-weight: bold;
+        display: inline-block; 
+        width: 1em;
+        margin-left: -1em;
     }
 }
 
@@ -204,6 +228,12 @@ Requirements and Registration
             border: solid $white-one 2px;
             font-size: 1.2rem;
             box-shadow: 0 0 0.5em $white-one;
+        }
+
+        #submitBtn:hover {
+            color: #fff;
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+            animation: neon-glow 2s linear infinite;
         }
 
         .form-control::placeholder {
@@ -247,12 +277,52 @@ Neon
   
   @keyframes neon-glow {
     0% {
-      text-shadow: 0 0 10px #d0d0d0, 0 0 20px #d0d0d0, 0 0 30px #d0d0d0; /* Initial glow effect */
+      text-shadow: 0 0 10px #a82929, 0 0 20px #a82929, 0 0 30px #a82929; /* Initial glow effect */
     }
     50% {
-      text-shadow: 0 0 20px #d0d0d0, 0 0 30px #d0d0d0, 0 0 40px #d0d0d0; /* Increased glow effect */
+      text-shadow: 0 0 20px #a82929, 0 0 30px #a82929, 0 0 40px #a82929; /* Increased glow effect */
     }
     100% {
-      text-shadow: 0 0 10px #d0d0d0, 0 0 20px #d0d0d0, 0 0 30px #d0d0d0; /* Return to initial glow */
+      text-shadow: 0 0 10px #a82929, 0 0 20px #a82929, 0 0 30px #a82929; /* Return to initial glow */
     }
+  }
+
+  /*
+  TEST
+  */
+  @keyframes tipsy {
+    0% {
+      transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+  }
+
+.mainTitle {
+    text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+}
+
+.mainTitle:before,
+.mainTitle:after {
+    content: '';
+    padding: .9em .4em;
+    position: absolute;
+    left: 50%;
+    width: 60%;
+    top: 50%;
+    display: block;
+    border: 2px solid red;
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    animation: 10s infinite alternate ease-in-out tipsy;
+  }
+  
+  .mainTitle:before {
+    border-color: #a82929 #a82929 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    z-index: -1;
+  }
+  
+  .mainTitle:after {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #a82929 #a82929;
+    box-shadow: 0 25px 25px rgba(46, 46, 49, .8);
   }

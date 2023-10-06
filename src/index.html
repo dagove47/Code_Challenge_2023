@@ -56,7 +56,7 @@
           <div class="home_title">
             <h1>Welcome to the <span class="neon-text">Animation Challenge</span></h1><br>
             <h5>Are you ready to unleash your creativity?</h5>
-            <a class="home_scroll mb-4" href="#about">
+            <a class="home_scroll mb-4" href="#requirements">
               <p class="m-0">scroll</p>
               <em class="bi bi-arrow-down fs-4 neon-text"></em>
             </a>
@@ -67,7 +67,7 @@
       <div class="container requirements" id="requirements">
         <!-- RULES -->
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#requirementsModal">
+        <button type="button" class="btn requirements_btn" data-bs-toggle="modal" data-bs-target="#requirementsModal">
           Requirements
         </button>
         <!-- Modal -->
@@ -75,7 +75,7 @@
           <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content bg-dark">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="requirementsLabel">Competition Requirements</h1>
+                <h1 class="modal-title fs-5 neon-text" id="requirementsLabel">Competition Requirements</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -89,7 +89,7 @@
                   <li>Animation theme: Landscapes.</li>
                   <li>Animation duration: 180 seconds.</li>
                   <li>Maximum number of pages: 1 page.</li>
-                  <li>Width: 100vw.</li>,
+                  <li>Width: 100vw.</li>
                   <li>Height: 100vh.</li>
                   <li>Styles without external frameworks: The goal is to evaluate participants' abilities to write CSS and
                     JS from scratch, so please do not use external frameworks like Bootstrap, Vue.js, etc.</li>
@@ -160,8 +160,7 @@
                 </ul>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn requirements_btn-modal" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
@@ -170,7 +169,7 @@
 
         <!-- RESOURCES -->
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#gitHubPagesModal">
+        <button type="button" class="btn requirements_btn" data-bs-toggle="modal" data-bs-target="#gitHubPagesModal">
           GitHub Pages
         </button>
         <!-- Modal -->
@@ -178,15 +177,14 @@
           <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content bg-dark">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="gitHubPagesModalLabel">Modal title</h1>
+                <h1 class="modal-title fs-5 neon-text" id="gitHubPagesModalLabel">Modal title</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 ...
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn requirements_btn-modal" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
@@ -235,7 +233,7 @@
             <div class="invalid-feedback">Please provide a Subject.</div>
           </div>
           <div class="col-12 d-flex justify-content-end">
-            <input class="btn fs-5 mt-3 formStyle" id="submitBtn" type="submit" value="Send Message!">
+            <input class="btn fs-5 mt-3 formStyle" id="submitBtn" type="submit" value="Send Registration!">
           </div>
         </form>
       </div>

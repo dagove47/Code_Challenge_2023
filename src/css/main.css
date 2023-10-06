@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 * {
   padding: 0;
@@ -14,7 +15,7 @@ body {
   min-height: 100vh;
   width: 100%;
   font-size: 16px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../assets/images/3d_background_1.gif");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../assets/images/bckgrn2.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -88,7 +89,7 @@ Home
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 10;
 }
 .home_title {
   height: 100%;
@@ -119,7 +120,7 @@ Home
 }
 .home_scroll:hover {
   font-size: 25px;
-  animation: glow 1s ease-in-out infinite alternate;
+  animation: neon-glow 1s ease-in-out infinite alternate;
 }
 
 /* 
@@ -140,7 +141,7 @@ Requirements and Registration
   flex-wrap: wrap;
   min-height: 40vh;
 }
-.requirements .btn {
+.requirements_btn {
   height: 150px;
   width: 300px;
   margin: 0 25px;
@@ -149,6 +150,26 @@ Requirements and Registration
   border: solid #F7F7F7 2px;
   box-shadow: 0 0 0.5em #F7F7F7;
   color: #F7F7F7;
+}
+.requirements_btn-modal {
+  background: none;
+  border: solid #F7F7F7 2px;
+  box-shadow: 0 0 0.5em #F7F7F7;
+  color: #F7F7F7;
+}
+.requirements .modal-body ul {
+  list-style: none;
+}
+.requirements .modal-body ul li {
+  margin-bottom: 15px;
+}
+.requirements .modal-body ul li::before {
+  content: "•";
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 
 .registration {
@@ -174,6 +195,11 @@ Requirements and Registration
   border: solid #F7F7F7 2px;
   font-size: 1.2rem;
   box-shadow: 0 0 0.5em #F7F7F7;
+}
+.registration .formNewMessage #submitBtn:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+  animation: neon-glow 2s linear infinite;
 }
 .registration .formNewMessage .form-control::-moz-placeholder {
   font-size: 1.2rem;
@@ -216,12 +242,50 @@ Neon
 
 @keyframes neon-glow {
   0% {
-    text-shadow: 0 0 10px #d0d0d0, 0 0 20px #d0d0d0, 0 0 30px #d0d0d0; /* Initial glow effect */
+    text-shadow: 0 0 10px #a82929, 0 0 20px #a82929, 0 0 30px #a82929; /* Initial glow effect */
   }
   50% {
-    text-shadow: 0 0 20px #d0d0d0, 0 0 30px #d0d0d0, 0 0 40px #d0d0d0; /* Increased glow effect */
+    text-shadow: 0 0 20px #a82929, 0 0 30px #a82929, 0 0 40px #a82929; /* Increased glow effect */
   }
   100% {
-    text-shadow: 0 0 10px #d0d0d0, 0 0 20px #d0d0d0, 0 0 30px #d0d0d0; /* Return to initial glow */
+    text-shadow: 0 0 10px #a82929, 0 0 20px #a82929, 0 0 30px #a82929; /* Return to initial glow */
   }
+}
+/*
+TEST
+*/
+@keyframes tipsy {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+.mainTitle {
+  text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+}
+
+.mainTitle:before,
+.mainTitle:after {
+  content: "";
+  padding: 0.9em 0.4em;
+  position: absolute;
+  left: 50%;
+  width: 60%;
+  top: 50%;
+  display: block;
+  border: 2px solid red;
+  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  animation: 10s infinite alternate ease-in-out tipsy;
+}
+
+.mainTitle:before {
+  border-color: #a82929 #a82929 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+.mainTitle:after {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #a82929 #a82929;
+  box-shadow: 0 25px 25px rgba(46, 46, 49, 0.8);
 }/*# sourceMappingURL=main.css.map */
