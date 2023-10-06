@@ -16,8 +16,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/main.css" />
   <!-- emailjs -->
-  <script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
     emailjs.init('sp-w7XqCrCVhxyy_T')
   </script>
@@ -77,7 +76,8 @@
           Requirements
         </button>
         <!-- Modal -->
-        <div class="modal fade" id="requirementsModal" tabindex="-1" aria-labelledby="requirementsModalLabel" aria-hidden="true">
+        <div class="modal fade" id="requirementsModal" tabindex="-1" aria-labelledby="requirementsModalLabel"
+          aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content bg-dark">
               <div class="modal-header">
@@ -97,7 +97,8 @@
                   <li>Maximum number of pages: 1 page.</li>
                   <li>Width: 100vw.</li>
                   <li>Height: 100vh.</li>
-                  <li>Styles without external frameworks: The goal is to evaluate participants' abilities to write CSS and
+                  <li>Styles without external frameworks: The goal is to evaluate participants' abilities to write CSS
+                    and
                     JS from scratch, so please do not use external frameworks like Bootstrap, Vue.js, etc.</li>
                   <li>Comments and readability: Participants are requested to use appropriate comments in their code to
                     explain complex sections or design decisions.</li>
@@ -117,7 +118,8 @@
                   </li>
                   <li>HTML:
                     <ul>
-                      <li>Semantic HTML structure: Use semantically appropriate HTML tags to ensure a clear and accessible
+                      <li>Semantic HTML structure: Use semantically appropriate HTML tags to ensure a clear and
+                        accessible
                         animation structure.</li>
                       <li>Specific attributes and properties: Specify the use of certain HTML attributes or properties,
                         such as the data- attribute, to facilitate communication between HTML and JavaScript.</li>
@@ -131,7 +133,8 @@
                         animation's structure and layout.</li>
                       <li>Use of Keyframes: Employ keyframes to create more complex and controlled animations within the
                         animation.</li>
-                      <li>Use of Media Queries: Implement media queries to establish specific styles based on screen size
+                      <li>Use of Media Queries: Implement media queries to establish specific styles based on screen
+                        size
                         and enhance the experience on different devices.</li>
                     </ul>
                   </li>
@@ -179,11 +182,12 @@
           GitHub Pages
         </button>
         <!-- Modal -->
-        <div class="modal fade" id="gitHubPagesModal" tabindex="-1" aria-labelledby="gitHubPagesModalLabel" aria-hidden="true">
+        <div class="modal fade" id="gitHubPagesModal" tabindex="-1" aria-labelledby="gitHubPagesModalLabel"
+          aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content bg-dark">
               <div class="modal-header">
-                <h1 class="modal-title fs-5 neon-text" id="gitHubPagesModalLabel">Modal title</h1>
+                <h1 class="modal-title fs-5 neon-text" id="gitHubPagesModalLabel">GitHub Pages</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -212,34 +216,42 @@
         <p>Create</p>
       </div>
     </section>
-    
+
     <section class="background_two">
       <div class="container registration flex-column" id="registration">
         <h2 class="registration_title neon-text">Registration</h2>
         <p class="registration_text">This is your chance to shine!</p>
         <form class="formNewMessage row g-3 needs-validation" id="formNewMessage" novalidate>
           <div class="col-md-6">
-            <label for="newParticipant" class="form-label">Name</label>
-            <input type="text" class="form-control formStyle" name="newParticipant" id="newParticipant" placeholder="John Doe" required>
+            <label for="newName" class="form-label">Name</label>
+            <input type="text" class="form-control formStyle" name="newName" id="newName" placeholder="John Doe"
+              required>
             <div class="valid-feedback">Looks good!</div>
             <div class="invalid-feedback">Please provide a valid name.</div>
           </div>
           <div class="col-md-6">
             <label for="newEmail" class="form-label">Email</label>
-            <input type="email" class="form-control formStyle" name="newEmail" id="newEmail" placeholder="john@example.com"
-              required>
+            <input type="email" class="form-control formStyle" name="newEmail" id="newEmail"
+              placeholder="john@example.com" required>
             <div class="valid-feedback">Looks good!</div>
             <div class="invalid-feedback">Please provide a valid email.</div>
           </div>
           <div class="col-12">
-            <label for="newGitHub" class="form-label">GitHub repository URL</label>
-            <input type="text" class="form-control formStyle" name="newGitHub" id="newGitHub" placeholder="https://github.com/..."
-              required>
+            <label for="newSubject" class="form-label">GitHub repository URL</label>
+            <input type="text" class="form-control formStyle" name="newSubject" id="newSubject"
+              placeholder="https://github.com/..." required>
             <div class="valid-feedback">Looks good!</div>
             <div class="invalid-feedback">Please provide a Subject.</div>
           </div>
+          <div class="col-12 d-none">
+            <label for="newMessage" class="form-label visually-hidden">Message</label>
+            <textarea class="form-control formStyle" name="newMessage" id="newMessage" placeholder="Message"
+              rows="3"></textarea>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please provide a Message.</div>
+          </div>
           <div class="col-12 d-flex justify-content-end">
-            <input class="btn fs-5 mt-3 formStyle" id="submitBtn" type="submit" value="Send Registration!" onsubmit="return false">
+            <input class="btn fs-5 mt-3 formStyle" id="submitBtn" type="submit" value="Send Message!">
           </div>
         </form>
       </div>
