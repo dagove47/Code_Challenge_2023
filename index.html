@@ -15,6 +15,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
   <!-- CSS -->
   <link rel="stylesheet" href="css/main.css" />
+  <!-- emailjs -->
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init('sp-w7XqCrCVhxyy_T')
+  </script>
   <!-- JS main -->
   <script type="module" src="js/main.js"></script>
   <title>Code Challenge 2023</title>
@@ -233,7 +239,7 @@
             <div class="invalid-feedback">Please provide a Subject.</div>
           </div>
           <div class="col-12 d-flex justify-content-end">
-            <input class="btn fs-5 mt-3 formStyle" id="submitBtn" type="submit" value="Send Registration!">
+            <input class="btn fs-5 mt-3 formStyle" id="submitBtn" type="submit" value="Send Registration!" onsubmit="return false">
           </div>
         </form>
       </div>
