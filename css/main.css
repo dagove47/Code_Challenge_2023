@@ -163,6 +163,9 @@ Requirements and Registration
 .requirements .modal-body ul li {
   margin-bottom: 15px;
 }
+.requirements .modal-body ol li {
+  margin-bottom: 15px;
+}
 .requirements .modal-body ul li::before {
   content: "•";
   color: red;
@@ -170,6 +173,9 @@ Requirements and Registration
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+}
+.requirements .modal-body ol li::marker {
+  color: red;
 }
 
 .registration {

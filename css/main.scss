@@ -193,6 +193,10 @@ Requirements and Registration
         margin-bottom: 15px;
     }
 
+    .modal-body ol li {
+        margin-bottom: 15px;
+    }
+
     .modal-body ul li::before {
         content: "\2022";
         color: red;
@@ -200,6 +204,10 @@ Requirements and Registration
         display: inline-block; 
         width: 1em;
         margin-left: -1em;
+    }
+
+    .modal-body ol li::marker {
+        color: red;
     }
 }
 

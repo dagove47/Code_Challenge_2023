@@ -92,7 +92,8 @@
                   <li>Repository submission deadline: November 10, 2023.</li>
                   <li>Animation and code presentation: November 17, 2023.</li>
                   <li>Time for project presentation: 15 to 20 minutes.</li>
-                  <li>Animation theme: Animated Hero for Subaru, animated forms, animated helper character explaining a page section.</li>
+                  <li>Animation theme: Animated Hero for Subaru, animated forms, animated helper character explaining a
+                    page section.</li>
                   <li>Maximum number of pages: 1 page.</li>
                   <li>Styles without external frameworks: The goal is to evaluate participants' abilities to write CSS
                     and
@@ -169,7 +170,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                ...
+                <p>To deploy your repository to GitHub Pages using GitHub:</p>
+                <ol>
+                  <li>On GitHub, navigate to your repository's <strong>Settings</strong> page.</li>
+                  <li>In the <strong>Code and automation</strong> section of the sidebar, click <strong>Pages</strong>.
+                  </li>
+                  <li>Under <strong>Source</strong>, select <strong>Deploy from a branch</strong>.</li>
+                  <li>Under <strong>Branch</strong>, select the branch that contains your website files.</li>
+                  <li>Click <strong>Save</strong>.</li>
+                </ol>
+                <p>Your website will be published to <code>https://username.github.io/repository_name</code>. It may
+                  take a few minutes
+                  for the changes to propagate.</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn requirements_btn-modal" data-bs-dismiss="modal">Close</button>
@@ -217,7 +229,7 @@
           <div class="col-12">
             <label for="newSubject" class="form-label">GitHub repository URL</label>
             <input type="text" class="form-control formStyle" name="newSubject" id="newSubject"
-              placeholder="https://github.com/..." required>
+              placeholder="https://username.github.io/repository_name" required>
             <div class="valid-feedback">Looks good!</div>
             <div class="invalid-feedback">Please provide a Subject.</div>
           </div>
